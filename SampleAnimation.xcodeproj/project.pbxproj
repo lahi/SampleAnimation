@@ -29,6 +29,8 @@
 		22DEBD4516AA437B00AD2584 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DEBD1216AA437A00AD2584 /* Foundation.framework */; };
 		22DEBD4D16AA437B00AD2584 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22DEBD4B16AA437B00AD2584 /* InfoPlist.strings */; };
 		22DEBD5016AA437B00AD2584 /* SampleAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DEBD4F16AA437B00AD2584 /* SampleAnimationTests.m */; };
+		22DEBD5E16AA44FE00AD2584 /* ATSampleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DEBD5D16AA44FE00AD2584 /* ATSampleImageView.m */; };
+		22DEBD6016AA485700AD2584 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 22DEBD5F16AA485700AD2584 /* circle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,9 @@
 		22DEBD4C16AA437B00AD2584 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		22DEBD4E16AA437B00AD2584 /* SampleAnimationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleAnimationTests.h; sourceTree = "<group>"; };
 		22DEBD4F16AA437B00AD2584 /* SampleAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleAnimationTests.m; sourceTree = "<group>"; };
+		22DEBD5C16AA44FE00AD2584 /* ATSampleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSampleImageView.h; sourceTree = "<group>"; };
+		22DEBD5D16AA44FE00AD2584 /* ATSampleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSampleImageView.m; sourceTree = "<group>"; };
+		22DEBD5F16AA485700AD2584 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,18 +135,13 @@
 		22DEBD1616AA437A00AD2584 /* SampleAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				22DEBD5916AA439600AD2584 /* ImageAnim */,
+				22DEBD5A16AA43AB00AD2584 /* PageAnim */,
+				22DEBD5B16AA43CF00AD2584 /* Resource */,
 				22DEBD1F16AA437A00AD2584 /* ATAppDelegate.h */,
 				22DEBD2016AA437A00AD2584 /* ATAppDelegate.m */,
 				22DEBD2816AA437A00AD2584 /* MainStoryboard_iPhone.storyboard */,
 				22DEBD2B16AA437A00AD2584 /* MainStoryboard_iPad.storyboard */,
-				22DEBD2E16AA437A00AD2584 /* ATFirstViewController.h */,
-				22DEBD2F16AA437A00AD2584 /* ATFirstViewController.m */,
-				22DEBD3116AA437A00AD2584 /* first.png */,
-				22DEBD3316AA437A00AD2584 /* first@2x.png */,
-				22DEBD3516AA437A00AD2584 /* ATSecondViewController.h */,
-				22DEBD3616AA437A00AD2584 /* ATSecondViewController.m */,
-				22DEBD3816AA437A00AD2584 /* second.png */,
-				22DEBD3A16AA437A00AD2584 /* second@2x.png */,
 				22DEBD1716AA437A00AD2584 /* Supporting Files */,
 			);
 			path = SampleAnimation;
@@ -178,6 +178,38 @@
 				22DEBD4B16AA437B00AD2584 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22DEBD5916AA439600AD2584 /* ImageAnim */ = {
+			isa = PBXGroup;
+			children = (
+				22DEBD2E16AA437A00AD2584 /* ATFirstViewController.h */,
+				22DEBD2F16AA437A00AD2584 /* ATFirstViewController.m */,
+				22DEBD5C16AA44FE00AD2584 /* ATSampleImageView.h */,
+				22DEBD5D16AA44FE00AD2584 /* ATSampleImageView.m */,
+			);
+			name = ImageAnim;
+			sourceTree = "<group>";
+		};
+		22DEBD5A16AA43AB00AD2584 /* PageAnim */ = {
+			isa = PBXGroup;
+			children = (
+				22DEBD3516AA437A00AD2584 /* ATSecondViewController.h */,
+				22DEBD3616AA437A00AD2584 /* ATSecondViewController.m */,
+			);
+			name = PageAnim;
+			sourceTree = "<group>";
+		};
+		22DEBD5B16AA43CF00AD2584 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				22DEBD5F16AA485700AD2584 /* circle.png */,
+				22DEBD3116AA437A00AD2584 /* first.png */,
+				22DEBD3316AA437A00AD2584 /* first@2x.png */,
+				22DEBD3816AA437A00AD2584 /* second.png */,
+				22DEBD3A16AA437A00AD2584 /* second@2x.png */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +294,7 @@
 				22DEBD3416AA437A00AD2584 /* first@2x.png in Resources */,
 				22DEBD3916AA437A00AD2584 /* second.png in Resources */,
 				22DEBD3B16AA437A00AD2584 /* second@2x.png in Resources */,
+				22DEBD6016AA485700AD2584 /* circle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +333,7 @@
 				22DEBD2116AA437A00AD2584 /* ATAppDelegate.m in Sources */,
 				22DEBD3016AA437A00AD2584 /* ATFirstViewController.m in Sources */,
 				22DEBD3716AA437A00AD2584 /* ATSecondViewController.m in Sources */,
+				22DEBD5E16AA44FE00AD2584 /* ATSampleImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +447,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleAnimation/SampleAnimation-Prefix.pch";
 				INFOPLIST_FILE = "SampleAnimation/SampleAnimation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -424,6 +459,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SampleAnimation/SampleAnimation-Prefix.pch";
 				INFOPLIST_FILE = "SampleAnimation/SampleAnimation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
