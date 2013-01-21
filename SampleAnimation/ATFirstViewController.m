@@ -34,6 +34,8 @@
     
     // Show imageview animation
     [_sImageView playShowImage];
+    
+    /// Hello World by cho
 }
 
 - (void)didReceiveMemoryWarning
