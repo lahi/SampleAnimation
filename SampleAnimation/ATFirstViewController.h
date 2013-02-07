@@ -18,11 +18,15 @@
 @property (strong) IBOutlet UIButton *aniSecondBtn;
 @property (strong) IBOutlet UIButton *aniThirdBtn;
 
+@property (strong, nonatomic) IBOutlet UITextView *animInTextView;
 
 @property (strong) IBOutlet UIButton *settingFirstBtn;
 @property (strong) IBOutlet UIButton *settingSecontBtn;
 @property (strong) IBOutlet UIButton *settingThirdBtn;
 
 @property (strong) IBOutlet ATSampleImageView *sImageView;
+
+- (IBAction)buttonClicked:(id)sender;
+- (IBAction)playClicked:(id)sender;
 
 @end

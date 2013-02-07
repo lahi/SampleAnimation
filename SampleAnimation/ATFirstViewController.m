@@ -14,12 +14,21 @@
 - (void) hideAniMenuBtn;
 - (void) hideSettingMenuBtn;
 
-- (void)setVisibleAnimationMenuBtn;
-- (void)showSettingMenuBtn;
+- (void) setVisibleAnimationMenuBtn;
+- (void) showSettingMenuBtn;
+
+- (void) showAnimationInformationOnTextView;
 @end
 
 @implementation ATFirstViewController
 @synthesize sImageView = _sImageView;
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self showAnimationInformationOnTextView];
+}
 
 - (void)viewDidLoad
 {
@@ -45,6 +54,22 @@
 }
 
 #pragma mark - view methods
+
+- (void) showAnimationInformationOnTextView
+{
+    NSArray *_info = [[ATAnimInfo sharedManager] aniInfoList];
+ 
+    //reset textview text
+    [self.animInTextView setText:nil];
+    
+    [_info enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        ATAnimModel *_model = (ATAnimModel *) obj;
+        
+        NSMutableString *_text = [NSMutableString stringWithString:self.animInTextView.text];
+        [_text appendFormat:@"%@ : %.2f duration : %.2f \n", _model.aniType, _model.aniValue, _model.duration];
+        [self.animInTextView setText:_text];
+    }];
+}
 
 - (void) showAniMenuBtn
 {
@@ -163,6 +188,30 @@
 - (void)imageViewLongPressEnded
 {
     
+}
+
+#pragma mark - action methods
+
+- (IBAction)buttonClicked:(id)sender {
+    [self setVisibleAnimationMenuBtn];
+}
+
+- (IBAction)playClicked:(id)sender {
+    NSArray *_info = [[ATAnimInfo sharedManager] aniInfoList];
+    float _delay = .0f;
+    
+    for (ATAnimModel *m in _info)
+    {
+        [self.sImageView performSelector:@selector(playAnimationWithModel:)
+                              withObject:m
+                              afterDelay:_delay];
+       _delay += m.duration;
+    }
+    
+    _delay += 1.0f;
+    [self.sImageView performSelector:@selector(resetAnimationProperties)
+                          withObject:nil
+                          afterDelay:_delay];
 }
 
 @end

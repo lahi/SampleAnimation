@@ -39,6 +39,13 @@
 
 #pragma mark - sample animation
 
+- (void)resetAnimationProperties
+{
+    //reset
+    self.alpha = 1.0f;
+    self.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
+}
+
 - (void)playShowImage
 {
     [UIView animateWithDuration:.3f
@@ -50,6 +57,22 @@
                                           animations:^{
                                               self.frame = CGRectMake(self.frame.origin.x + 5, self.frame.origin.y + 5, self.frame.size.width - 10, self.frame.size.height - 10);
                                           }];
+                     }];
+}
+
+- (void) playAnimationWithModel :(ATAnimModel *) model
+{
+    self.alpha = .98f;
+    [UIView animateWithDuration:model.duration
+                     animations:^{
+#warning 타입.. 좀더 유연하게 바꿔야 함 
+                         if ([model.aniType isEqualToString:kScaleType])
+                         {
+                             self.alpha = 1.0f;
+                             self.transform = CGAffineTransformScale(self.transform, model.aniValue, model.aniValue);
+                             
+                             NSLog(@"sclae :%f", model.aniValue);
+                         }
                      }];
 }
 

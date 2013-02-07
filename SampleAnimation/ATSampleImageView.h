@@ -23,6 +23,9 @@
 
 - (void)addGestures;
 
+- (void)resetAnimationProperties;
+
 - (void)playShowImage;
+- (void)playAnimationWithModel :(ATAnimModel *) model;
 
 @end
