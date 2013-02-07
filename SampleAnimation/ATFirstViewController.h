@@ -14,15 +14,15 @@
     ATSampleImageView *_sImageView;
 }
 
-@property (retain, nonatomic) IBOutlet UIButton *aniFirstBtn;
-@property (retain, nonatomic) IBOutlet UIButton *aniSecondBtn;
-@property (retain, nonatomic) IBOutlet UIButton *aniThirdBtn;
+@property (strong) IBOutlet UIButton *aniFirstBtn;
+@property (strong) IBOutlet UIButton *aniSecondBtn;
+@property (strong) IBOutlet UIButton *aniThirdBtn;
 
 
-@property (retain, nonatomic) IBOutlet UIButton *settingFirstBtn;
-@property (retain, nonatomic) IBOutlet UIButton *settingSecontBtn;
-@property (retain, nonatomic) IBOutlet UIButton *settingThirdBtn;
+@property (strong) IBOutlet UIButton *settingFirstBtn;
+@property (strong) IBOutlet UIButton *settingSecontBtn;
+@property (strong) IBOutlet UIButton *settingThirdBtn;
 
-@property (nonatomic, retain) IBOutlet ATSampleImageView *sImageView;
+@property (strong) IBOutlet ATSampleImageView *sImageView;
 
 @end

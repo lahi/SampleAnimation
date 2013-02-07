@@ -44,20 +44,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)dealloc
-{
-    self.sImageView = nil;
-    
-    [_settingFirstBtn release];
-    [_settingSecontBtn release];
-    [_settingThirdBtn release];
-    [_aniFirstBtn release];
-    [_aniSecondBtn release];
-    [_aniThirdBtn release];
-    
-    [super dealloc];
-}
-
 #pragma mark - view methods
 
 - (void) showAniMenuBtn

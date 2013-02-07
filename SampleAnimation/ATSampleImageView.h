@@ -17,11 +17,9 @@
 @end
 
 @interface ATSampleImageView : UIImageView <UIGestureRecognizerDelegate>
-{
-    id <ATSampleImageDelegate> _delegate;
-}
 
-@property (nonatomic, assign) id delegate;
+
+@property (unsafe_unretained) id <ATSampleImageDelegate> delegate;
 
 - (void)addGestures;
 

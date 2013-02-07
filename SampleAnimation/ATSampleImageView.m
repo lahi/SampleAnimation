@@ -13,7 +13,7 @@
 
 - (void) addGestures
 {
-    UILongPressGestureRecognizer *longTap = [[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressTapped:)] autorelease];
+    UILongPressGestureRecognizer *longTap = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressTapped:)];
     longTap.numberOfTouchesRequired = 1;
     longTap.minimumPressDuration = 1.0f;
     [longTap setDelegate:self];
@@ -21,18 +21,11 @@
     
     [self addGestureRecognizer:longTap];
     
-    UITapGestureRecognizer *tap = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewtapped:)] autorelease];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewtapped:)];
     tap.numberOfTapsRequired = 1;
     [longTap setDelegate:self];
     
     [self addGestureRecognizer:tap];
-}
-
-- (void) dealloc
-{
-    self.delegate = nil;
-    
-    [super dealloc];
 }
 
 /*
