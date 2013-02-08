@@ -66,7 +66,11 @@
         ATAnimModel *_model = (ATAnimModel *) obj;
         
         NSMutableString *_text = [NSMutableString stringWithString:self.animInTextView.text];
-        [_text appendFormat:@"%@ : %.2f duration : %.2f \n", _model.aniType, _model.aniValue, _model.duration];
+        [_model.aniDic enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            [_text appendFormat:@"%@ : %.2f ", key, [obj floatValue]];
+        }];
+        
+        [_text appendFormat:@"duration : %.2f \n", _model.duration];
         [self.animInTextView setText:_text];
     }];
 }
@@ -169,7 +173,7 @@
     }
     else // 다 안보여졌을 경우에는 animation menu button show
     {
-        [self showAniMenuBtn];
+        [self showAniMenuBtn]; 
     }
 }
 

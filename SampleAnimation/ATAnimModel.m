@@ -10,4 +10,14 @@
 
 @implementation ATAnimModel
 
+- (id) init
+{
+    if ((self = [super init]))
+    {
+        self.aniDic = [NSMutableDictionary dictionary];
+    }
+    
+    return self;
+}
+
 @end

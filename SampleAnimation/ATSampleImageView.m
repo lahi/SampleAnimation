@@ -66,12 +66,12 @@
     [UIView animateWithDuration:model.duration
                      animations:^{
 #warning 타입.. 좀더 유연하게 바꿔야 함 
-                         if ([model.aniType isEqualToString:kScaleType])
+                         if ([model.aniDic valueForKey:kScaleType])
                          {
                              self.alpha = 1.0f;
-                             self.transform = CGAffineTransformScale(self.transform, model.aniValue, model.aniValue);
+                             self.transform = CGAffineTransformScale(self.transform, [[model.aniDic valueForKey:kScaleType] floatValue], [[model.aniDic valueForKey:kScaleType] floatValue]);
                              
-                             NSLog(@"sclae :%f", model.aniValue);
+                             NSLog(@"sclae :%f", [[model.aniDic valueForKey:kScaleType] floatValue]);
                          }
                      }];
 }

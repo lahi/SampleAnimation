@@ -40,8 +40,7 @@
     if ([self.durationField.text isFloatNumber] && [self.scaleField.text isFloatNumber])
     {
         ATAnimModel *_scaleModel = [[ATAnimModel alloc] init];
-        [_scaleModel setAniType:kScaleType];
-        [_scaleModel setAniValue:[self.scaleField.text floatValue]];
+        [_scaleModel.aniDic setValue:[NSNumber numberWithFloat:[self.scaleField.text floatValue]] forKey:kScaleType];
         [_scaleModel setDuration:[self.durationField.text floatValue]];
         [[[ATAnimInfo sharedManager] aniInfoList] addObject:_scaleModel];
         
