@@ -23,6 +23,7 @@
 - (id)init {
     if (self = [super init]) {
         self.aniInfoList = [NSMutableArray arrayWithCapacity:0];
+        self.currImgName = @"circle";
     }
     return self;
 }

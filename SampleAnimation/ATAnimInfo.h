@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #define kScaleType  @"scale"
+#define kAlphaType  @"alpha"
 
 @interface ATAnimInfo : NSObject
 
 @property (nonatomic, strong) NSMutableArray *aniInfoList;
+@property (strong) NSString *currImgName;
 
 + (id)sharedManager;
 

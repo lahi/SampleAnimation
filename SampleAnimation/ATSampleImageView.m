@@ -62,16 +62,21 @@
 
 - (void) playAnimationWithModel :(ATAnimModel *) model
 {
-    self.alpha = .98f;
+    //self.alpha = .98f;
     [UIView animateWithDuration:model.duration
                      animations:^{
-#warning 타입.. 좀더 유연하게 바꿔야 함 
+ 
                          if ([model.aniDic valueForKey:kScaleType])
                          {
-                             self.alpha = 1.0f;
                              self.transform = CGAffineTransformScale(self.transform, [[model.aniDic valueForKey:kScaleType] floatValue], [[model.aniDic valueForKey:kScaleType] floatValue]);
                              
                              NSLog(@"sclae :%f", [[model.aniDic valueForKey:kScaleType] floatValue]);
+                         }
+                         
+                         if ([model.aniDic valueForKey:kAlphaType])
+                         {
+                             self.alpha = [[model.aniDic valueForKey:kAlphaType] floatValue];
+                             NSLog(@"alpha :%f", [[model.aniDic valueForKey:kAlphaType] floatValue]);
                          }
                      }];
 }

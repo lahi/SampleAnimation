@@ -10,9 +10,7 @@
 
 @interface ATAnimModel : NSObject
 
-@property (nonatomic) float duration;
-//start time
-
 @property (nonatomic, strong) NSMutableDictionary *aniDic;
+@property (nonatomic) float duration;
 
 @end
