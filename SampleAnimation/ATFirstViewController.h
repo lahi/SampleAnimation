@@ -12,6 +12,8 @@
 @interface ATFirstViewController : UIViewController <ATSampleImageDelegate>
 {
     ATSampleImageView *_sImageView;
+    
+    BOOL _isLongPressEnded;
 }
 
 @property (strong) IBOutlet UIButton *aniFirstBtn;

@@ -168,14 +168,17 @@
 - (void) setVisibleAnimationMenuBtn
 {
     // setting 메뉴나 animation menu가 보여진 경우에는 hidden
-    if (_settingFirstBtn.hidden == NO || _aniFirstBtn.hidden == NO)
+    if (_settingThirdBtn.hidden == NO || _aniFirstBtn.hidden == NO)
     {
         [self hideAniMenuBtn];
-        [self hideSettingMenuBtn];
+        
+        if (_isLongPressEnded)
+            [self hideSettingMenuBtn];
     }
     else // 다 안보여졌을 경우에는 animation menu button show
     {
-        [self showAniMenuBtn]; 
+        if (_settingFirstBtn.hidden)
+            [self showAniMenuBtn];
     }
 }
 
@@ -188,12 +191,14 @@
 
 - (void)imageViewLongPressStarted
 {
+    _isLongPressEnded = NO;
+    
     [self showSettingMenuBtn];
 }
 
 - (void)imageViewLongPressEnded
 {
-    
+    _isLongPressEnded = YES;
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
