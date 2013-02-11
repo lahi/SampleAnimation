@@ -121,7 +121,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="playClicked:" destination="2" eventType="touchUpInside" id="uZZ-aZ-lLQ"/>
+                                    <action selector="buttonClicked:" destination="2" eventType="touchUpInside" id="x7x-bK-B4h"/>
+                                    <action selector="playClicked:" destination="2" eventType="touchUpInside" id="Xop-bG-GWh"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -611,6 +612,65 @@
         <image name="first" width="16" height="16"/>
         <image name="second" width="16" height="16"/>
     </resources>
+    <classes>
+        <class className="ATAlphaViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ATAlphaViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addClicked:"/>
+                <relationship kind="action" name="alphaChanged:"/>
+                <relationship kind="action" name="cancelClicked:"/>
+                <relationship kind="outlet" name="alphaLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="alphaSlide" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="durationField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="imgView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="ATFirstViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ATFirstViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonClicked:"/>
+                <relationship kind="action" name="playClicked:"/>
+                <relationship kind="outlet" name="aniFirstBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="aniSecondBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="aniThirdBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="animInTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="sImageView" candidateClass="ATSampleImageView"/>
+                <relationship kind="outlet" name="settingFirstBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="settingSecontBtn" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="settingThirdBtn" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="ATSampleImageView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ATSampleImageView.h"/>
+        </class>
+        <class className="ATScaleViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ATScaleViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addClicked:"/>
+                <relationship kind="action" name="closeClicked:"/>
+                <relationship kind="outlet" name="durationField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="scaleField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ATSecondViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ATSecondViewController.h"/>
+        </class>
+        <class className="ATTransitionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ATTransitionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addClicked:"/>
+                <relationship kind="action" name="cancelClicked:"/>
+                <relationship kind="action" name="pointClicked:"/>
+                <relationship kind="outlet" name="durationField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="endPointLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="startPointLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="touchView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

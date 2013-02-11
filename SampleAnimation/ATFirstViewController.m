@@ -207,7 +207,8 @@
 #pragma mark - action methods
 
 - (IBAction)buttonClicked:(id)sender {
-    [self setVisibleAnimationMenuBtn];
+    [self hideAniMenuBtn];
+    [self hideSettingMenuBtn];
 }
 
 - (IBAction)playClicked:(id)sender {
