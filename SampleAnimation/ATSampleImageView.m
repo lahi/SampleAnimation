@@ -23,7 +23,7 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewtapped:)];
     tap.numberOfTapsRequired = 1;
-    [longTap setDelegate:self];
+    [tap setDelegate:self];
     
     [self addGestureRecognizer:tap];
 }
@@ -44,6 +44,7 @@
     //reset
     self.alpha = 1.0f;
     self.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
+    self.frame = CGRectMake(142, 230, 40, 40);
 }
 
 - (void)playShowImage
@@ -62,7 +63,15 @@
 
 - (void) playAnimationWithModel :(ATAnimModel *) model
 {
-    //self.alpha = .98f;
+    if ([model.aniDic valueForKey:kTransitionTypeStart])
+    {
+        NSDictionary *_startPointDic = [model.aniDic valueForKey:kTransitionTypeStart];
+        
+        float _startX = [[_startPointDic valueForKey:@"x"] floatValue];
+        float _startY = [[_startPointDic valueForKey:@"y"] floatValue];
+        [self setFrame:CGRectMake(_startX - self.frame.size.width/2, _startY - self.frame.size.height/2, self.frame.size.width, self.frame.size.height)];
+    }
+    
     [UIView animateWithDuration:model.duration
                      animations:^{
  
@@ -77,6 +86,15 @@
                          {
                              self.alpha = [[model.aniDic valueForKey:kAlphaType] floatValue];
                              NSLog(@"alpha :%f", [[model.aniDic valueForKey:kAlphaType] floatValue]);
+                         }
+                         
+                         if ([model.aniDic valueForKey:kTransitionTypeEnd])
+                         {
+                             NSDictionary *_endPointDic = [model.aniDic valueForKey:kTransitionTypeEnd];
+                             
+                             float _endX = [[_endPointDic valueForKey:@"x"] floatValue];
+                             float _endY = [[_endPointDic valueForKey:@"y"] floatValue];
+                             [self setFrame:CGRectMake(_endX - self.frame.size.width/2, _endY - self.frame.size.height/2, self.frame.size.width, self.frame.size.height)];
                          }
                      }];
 }

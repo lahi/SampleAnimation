@@ -8,6 +8,8 @@
 
 #import "ATFirstViewController.h"
 
+#import "ATTransitionViewController.h"
+
 @interface ATFirstViewController ()
 - (void)initSampleImageView;
 
@@ -67,7 +69,7 @@
         
         NSMutableString *_text = [NSMutableString stringWithString:self.animInTextView.text];
         [_model.aniDic enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-            [_text appendFormat:@"%@ : %.2f ", key, [obj floatValue]];
+            [_text appendFormat:@"%@ : %@", key, obj];
         }];
         
         [_text appendFormat:@"duration : %.2f \n", _model.duration];
@@ -192,6 +194,14 @@
 - (void)imageViewLongPressEnded
 {
     
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"at.view.transition"]) {
+        ATTransitionViewController *vc = [segue destinationViewController];
+        [vc setCurrImgPoint:CGPointMake(_sImageView.frame.origin.x, _sImageView.frame.origin.y)];
+    }
 }
 
 #pragma mark - action methods

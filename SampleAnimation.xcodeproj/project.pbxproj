@@ -12,6 +12,7 @@
 		221396A916C40F3C001D0F44 /* ATValidate+NSString.m in Sources */ = {isa = PBXBuildFile; fileRef = 221396A816C40F3C001D0F44 /* ATValidate+NSString.m */; };
 		221396AC16C4160E001D0F44 /* ATAnimModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 221396AB16C4160D001D0F44 /* ATAnimModel.m */; };
 		229DCA7316C53B25003AFA92 /* ATAlphaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229DCA7216C53B25003AFA92 /* ATAlphaViewController.m */; };
+		229DCA7716C8BD88003AFA92 /* ATTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229DCA7616C8BD88003AFA92 /* ATTransitionViewController.m */; };
 		22DEBD1116AA437A00AD2584 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DEBD1016AA437A00AD2584 /* UIKit.framework */; };
 		22DEBD1316AA437A00AD2584 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DEBD1216AA437A00AD2584 /* Foundation.framework */; };
 		22DEBD1516AA437A00AD2584 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DEBD1416AA437A00AD2584 /* CoreGraphics.framework */; };
@@ -59,6 +60,8 @@
 		221396AB16C4160D001D0F44 /* ATAnimModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATAnimModel.m; sourceTree = "<group>"; };
 		229DCA7116C53B25003AFA92 /* ATAlphaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATAlphaViewController.h; sourceTree = "<group>"; };
 		229DCA7216C53B25003AFA92 /* ATAlphaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATAlphaViewController.m; sourceTree = "<group>"; };
+		229DCA7516C8BD88003AFA92 /* ATTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATTransitionViewController.h; sourceTree = "<group>"; };
+		229DCA7616C8BD88003AFA92 /* ATTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATTransitionViewController.m; sourceTree = "<group>"; };
 		22DEBD0C16AA437A00AD2584 /* SampleAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DEBD1016AA437A00AD2584 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22DEBD1216AA437A00AD2584 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,6 +127,8 @@
 				221396A016C409DC001D0F44 /* ATScaleViewController.m */,
 				229DCA7116C53B25003AFA92 /* ATAlphaViewController.h */,
 				229DCA7216C53B25003AFA92 /* ATAlphaViewController.m */,
+				229DCA7516C8BD88003AFA92 /* ATTransitionViewController.h */,
+				229DCA7616C8BD88003AFA92 /* ATTransitionViewController.m */,
 			);
 			name = Memu;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 				221396A916C40F3C001D0F44 /* ATValidate+NSString.m in Sources */,
 				221396AC16C4160E001D0F44 /* ATAnimModel.m in Sources */,
 				229DCA7316C53B25003AFA92 /* ATAlphaViewController.m in Sources */,
+				229DCA7716C8BD88003AFA92 /* ATTransitionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

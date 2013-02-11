@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#define kScaleType  @"scale"
-#define kAlphaType  @"alpha"
+#define kScaleType              @"scale"
+#define kAlphaType              @"alpha"
+#define kTransitionTypeStart    @"transitionStart"
+#define kTransitionTypeEnd      @"transitionEnd"
 
 @interface ATAnimInfo : NSObject
 
