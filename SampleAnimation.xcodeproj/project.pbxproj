@@ -37,6 +37,7 @@
 		22DEBD5016AA437B00AD2584 /* SampleAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DEBD4F16AA437B00AD2584 /* SampleAnimationTests.m */; };
 		22DEBD5E16AA44FE00AD2584 /* ATSampleImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DEBD5D16AA44FE00AD2584 /* ATSampleImageView.m */; };
 		22DEBD6016AA485700AD2584 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 22DEBD5F16AA485700AD2584 /* circle.png */; };
+		2B6F789316C8EEC500915FB5 /* ATModelSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6F789216C8EEC500915FB5 /* ATModelSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		22DEBD5C16AA44FE00AD2584 /* ATSampleImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATSampleImageView.h; sourceTree = "<group>"; };
 		22DEBD5D16AA44FE00AD2584 /* ATSampleImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATSampleImageView.m; sourceTree = "<group>"; };
 		22DEBD5F16AA485700AD2584 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		2B6F789116C8EEC500915FB5 /* ATModelSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATModelSettingViewController.h; sourceTree = "<group>"; };
+		2B6F789216C8EEC500915FB5 /* ATModelSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATModelSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,7 @@
 		221396A216C40AD3001D0F44 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2B6F789016C8EEB400915FB5 /* Manager */,
 				221396AA16C4160D001D0F44 /* ATAnimModel.h */,
 				221396AB16C4160D001D0F44 /* ATAnimModel.m */,
 				221396A316C40B06001D0F44 /* ATAnimInfo.h */,
@@ -266,6 +270,15 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		2B6F789016C8EEB400915FB5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2B6F789116C8EEC500915FB5 /* ATModelSettingViewController.h */,
+				2B6F789216C8EEC500915FB5 /* ATModelSettingViewController.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -394,6 +407,7 @@
 				221396AC16C4160E001D0F44 /* ATAnimModel.m in Sources */,
 				229DCA7316C53B25003AFA92 /* ATAlphaViewController.m in Sources */,
 				229DCA7716C8BD88003AFA92 /* ATTransitionViewController.m in Sources */,
+				2B6F789316C8EEC500915FB5 /* ATModelSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

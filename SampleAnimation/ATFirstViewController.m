@@ -9,6 +9,7 @@
 #import "ATFirstViewController.h"
 
 #import "ATTransitionViewController.h"
+#import "ATModelSettingViewController.h"
 
 @interface ATFirstViewController ()
 - (void)initSampleImageView;
@@ -206,6 +207,10 @@
     if ([[segue identifier] isEqualToString:@"at.view.transition"]) {
         ATTransitionViewController *vc = [segue destinationViewController];
         [vc setCurrImgPoint:CGPointMake(_sImageView.frame.origin.x, _sImageView.frame.origin.y)];
+    } else if ([[segue identifier] isEqualToString:@"modelSettingManager"]) {
+        ATModelSettingViewController *vc = [segue destinationViewController];
+        vc.viewModel = _sImageView;
+        NSLog(@"dddd");
     }
 }
 
